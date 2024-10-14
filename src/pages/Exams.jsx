@@ -12,7 +12,7 @@ const Exams = () => {
   // const timerValue = "120:59"; // Timer value
 
   return (
-    <div className="p-4 md:p-8 mt-12">
+    <div className="p-2 md:p-8">
       {/* Header */}
       <div className="flex justify-between border mb-4 bg-white p-3 md:p-4 rounded-md shadow-custom  max-w-[100%]">
         <h1 className="text-lg md:text-2xl font-semibold text-gray-700 w-72">

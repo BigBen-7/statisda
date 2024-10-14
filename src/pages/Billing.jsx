@@ -6,7 +6,7 @@ import { IoIosInformationCircle } from "react-icons/io";
 
 function Billing() {
   return (
-    <div className="bg-slate-100 p-4 md:p-8 mt-12">
+    <div className="bg-slate-100 p-4 md:p-8">
       <div className="flex justify-between items-center">
         <h3 className="font-semibold text-2xl">Billing</h3>
         {/* Header section with current plan and button to change the plan */}

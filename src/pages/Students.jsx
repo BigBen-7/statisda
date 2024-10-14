@@ -3,7 +3,7 @@ import NoStudent from "../component/NoStudent";
 import StudentModal from "../component/StudentModal";
 import StudentsList from "../component/StudentsList";
 // import StudentDetails from "../component/StudentDetails"; 
-import schoolData from "../data/db.json";
+import schoolData from "../data/db.js";
 
 function Students() {
   const [open, setOpen] = useState(false);
@@ -32,7 +32,7 @@ function Students() {
   // };
 
   return (
-    <div className="px-6 sm:px-6 lg:px-8 mt-20 flex">
+    <div className="px-6 sm:px-6 lg:px-8 mt-1 flex">
       <div className="w-2/3 mx-auto max-w-7xl">
         {/* Header */}
         <div className="flex justify-between items-center">

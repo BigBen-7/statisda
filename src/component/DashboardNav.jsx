@@ -11,7 +11,7 @@ function DashboardNav() {
   };
 
   return (
-    <div className="bg-[#FCFAFA] p-4 w-full sm:w-[100%] shadow-custom  fixed  shadow z-10  ">
+    <div className="bg-[#FCFAFA] p-4  shadow-md">
       <div className="flex flex-col lg:flex-row justify-between items-center">
         {/* Left Section (Message) */}
         <div className="text-[#424242] text-center lg:text-left mb-4 lg:mb-0">

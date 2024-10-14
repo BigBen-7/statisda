@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import NoTeachers from "../component/NoTeachers";
 import TeacherModal from "../component/TeacherModal";
 import TeachersList from "../component/TeachersList";
-import schoolData from "../data/db.json";
+import schoolData from "../data/db.js";
 
 function Teachers() {
   const [open, setOpen] = useState(false);
@@ -19,7 +19,7 @@ function Teachers() {
   }, []);
 
   return (
-    <div className="mt-20">
+    <div className="mt-1">
       <div className="mx-auto max-w-7xl px-10 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center  py-2  lg:px-6">
           {/* Teachers Heading */}

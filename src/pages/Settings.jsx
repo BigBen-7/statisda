@@ -3,7 +3,7 @@ import React from "react";
 
 function Settings() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-8 mt-12">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-8">
       {/* Breadcrumb */}
       <div className="w-full max-w-4xl px-4">
         <h2 className="text-sm text-gray-500">Account settings / Profile</h2>

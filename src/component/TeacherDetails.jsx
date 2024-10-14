@@ -5,7 +5,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";
 import { PiGraduationCapLight } from "react-icons/pi";
 import Avatar from "../ui/Avatar";
-import schoolData from "../data/db.json"
+import schoolData from "../data/db.js"
 
 const icons = [PiGraduationCapLight, FiPhoneCall, HiOutlineEnvelope];
 

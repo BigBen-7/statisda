@@ -114,12 +114,12 @@ function Sidebar() {
             </div>
           </div>
           {/* features */}
-          <div className="my-16 mb-[5.8rem]">
+          <div className="my-4 mb-[5.8rem]">
             <Link
               to="/dashboard/features"
               className={`flex items-center gap-4 ${
                 activeLink === "/dashboard/features" ? "bg-blue-500" : ""
-              } hover:bg-blue-300 px-4 py-2 rounded-lg`}
+              } hover:bg-blue-300 px-4  rounded-lg`}
               onClick={() => handleSetActiveLink("/dashboard/features")}
             >
               <RiBankLine /> Features
