@@ -1,9 +1,11 @@
+import kristen from "../assets/Kristin.svg";
+
 const schoolData = {
   teachers: [
     {
       id: 1,
       name: "Kristin Watson",
-      profilePhoto: "/src/assets/Kristin.svg",
+      profilePhoto: kristen,
       subject: "Chemistry",
       class: "JSS 2",
       email: "michelle.rivera@example.com",
