@@ -1,0 +1,7 @@
+body {
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  max-width: 10256px;
+  margin: auto;
+}
