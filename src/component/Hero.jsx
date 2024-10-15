@@ -9,17 +9,19 @@ export default function Example() {
     <>
       <div className="text-center font-kumbh  mx-auto ">
         {/* ENTIRE HERO DIV */}
-        <div className="mt-10">
+        <div className="bg-[#100F57] ">
           {/* FREE CONSULTATION BUTTON */}
-          <Button
-            label="Get your free consultation now"
-            bgColor="bg-[#100F57]"
-            textColor="text-[#D89925]"
-            border="border-2 border-#fff"
-            hoverBgColor="bg-indigo-500"
-          />
           {/* MANAGE YOUR TEAM DIV */}
-          <div className="flex justify-center relative">
+          <div className="pt-10">
+            <Button
+              label="Get your free consultation now"
+              bgColor="bg-[#100F57]"
+              textColor="text-[#D89925]"
+              border="border-2 border-#fff"
+              hoverBgColor="bg-indigo-500"
+            />
+          </div>
+          <div className="flex justify-center relative bg-[#100F57]">
             <img
               src={leftCurve}
               alt="leftCurve"
@@ -51,15 +53,14 @@ export default function Example() {
               className="hidden md:block md:absolute md:right-[2rem]  md:top-[1rem] lg:right-[10rem]"
             />
           </div>
-          <div className="mt-4 flex flex-col gap-6 items-center justify-center gap-x-6">
-          <img
-            src={HeroImage}
-            alt="HeroImage"
-            className="shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-full lg:w-auto"
-          />
+          <div className="mt-28 flex flex-col gap-6 items-center justify-center bg-white gap-x-6">
+            <img
+              src={HeroImage}
+              alt="HeroImage"
+              className="shadow-lg -mt-20   w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-full lg:w-auto"
+            />
+          </div>
         </div>
-        </div>
-       
       </div>
     </>
   );

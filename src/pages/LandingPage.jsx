@@ -6,8 +6,8 @@ import Features from "../component/Features";
 
 function LandingPage() {
   return (
-    <div className="bg-[#100F57]">
-        <div className="h-[80vh] container mx-auto sm:px-6 lg:px-8">
+    <div className="">
+        <div className="  w-full">
         <Navbar />
         <Hero />
         <Features/>

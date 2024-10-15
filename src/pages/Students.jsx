@@ -32,8 +32,8 @@ function Students() {
   // };
 
   return (
-    <div className="px-6 sm:px-6 lg:px-8 mt-1 flex">
-      <div className="w-2/3 mx-auto max-w-7xl">
+    <div className="">
+      <div className="">
         {/* Header */}
         <div className="flex justify-between items-center">
           <div className="text-[#4F4F4F] font-medium">

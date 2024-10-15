@@ -30,12 +30,12 @@ const TeacherDetail = () => {
   if (!ID) {
     return <div>Teacher not found</div>; // Handle case where teacher is not found
   }
-  const filtered = teachers.filter((teacher) => teacher.id === id);
+  const filtered = teachers.filter((teacher) => teacher.id === ID);
   console.log(filtered);
   return (
     <div className="p-6">
       {teachers
-        .filter((teacher) => teacher.id === id)
+        .filter((teacher) => teacher.id === ID)
         .map((teacherdetails) => (
           <div
             key={teacherdetails.id}

@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
+// import { useEffect, useState } from "react"
 import { useState } from "react";
 import SearchInput from "../ui/SearchInput";
 
-export default function StudentsList({ students}) {
-  // , onStudentClick 
-  const [search, setSearch] = useState(""); // Step 1: set search state
+export default function StudentsList({ students }) {
+  const [search, setSearch] = useState(""); //step1: set search state
 
-  // Step 2: filter students based on search(by name or email)
+  //step2: filter students based on search(by name or email)
   const filteredStudents = students.filter(
     (student) =>
       student.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -15,7 +15,7 @@ export default function StudentsList({ students}) {
 
   return (
     <div className="px-4 sm:px-6 lg:px-8">
-      {/* Step 3: pass the setSearch to update the search term */}
+      {/* step 3: pass the setSearch to update the search term... */}
       <SearchInput search={search} setSearch={setSearch} />
 
       {/* Student Table */}
@@ -63,13 +63,9 @@ export default function StudentsList({ students}) {
               <tbody className="bg-white">
                 {filteredStudents.length > 0 ? (
                   filteredStudents.map((student) => (
-                    <tr
-                      key={student.id}
-                      className="even:bg-[#EBF6FF80] hover:bg-gray-100 cursor-pointer" // Call the click handler here
-                    >
-                      {/* onClick={() => onStudentClick(student)} */}
+                    <tr key={student.email} className="even:bg-[#EBF6FF80]">
                       <td className="whitespace-nowrap flex items-center gap-3 py-4 pl-4 pr-3 text-xs font-medium text-gray-900 sm:pl-3">
-                        <img src={student.profilePhoto} alt={student.name} />
+                        <img src={student.profilePhoto} alt={student.name} />{" "}
                         {student.name}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">

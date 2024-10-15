@@ -20,8 +20,8 @@ function Teachers() {
 
   return (
     <div className="mt-1">
-      <div className="mx-auto max-w-7xl px-10 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center  py-2  lg:px-6">
+      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-2 lg:px-6">
           {/* Teachers Heading */}
           <div className="text-[#4F4F4F] font-sm">
             <h3 className="text-lg lg:text-xl">Teachers</h3>

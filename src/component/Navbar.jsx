@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="font-kumbh ">
+    <nav className="font-kumbh bg-[#100F57] ">
       <div className="w-full flex items-center justify-between px-5 py-4 md:px-4 mx-auto max-w-[1240px]">
         {/* <div className="container  mx-auto  flex justify-between items-center max-w-screen-xl"> */}
         <div className="font-bold text-xl">
