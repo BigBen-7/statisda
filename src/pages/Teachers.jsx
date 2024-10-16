@@ -4,7 +4,7 @@ import NoTeachers from '../component/NoTeachers';
 import TeacherModal from '../component/TeacherModal';
 import TeachersList from '../component/TeachersList';
 import schoolData from '../data/db.js';
-import FadeInWrapper from 'src/ui/FadeInWrapper';
+import FadeInWrapper from '../../src/ui/FadeInWrapper';
 
 function Teachers() {
   const [open, setOpen] = useState(false);

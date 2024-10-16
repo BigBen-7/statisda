@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import FadeInWrapper from 'src/ui/FadeInWrapper';
+import FadeInWrapper from '../../src/ui/FadeInWrapper';
 
 function Settings() {
   return (

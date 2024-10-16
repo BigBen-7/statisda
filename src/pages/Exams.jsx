@@ -7,7 +7,7 @@ import CountDownTimer from '../component/CountDownTimer';
 import { ImHourGlass } from 'react-icons/im';
 import { HiOutlineLightBulb } from 'react-icons/hi';
 import { GiInfo } from 'react-icons/gi';
-import FadeInWrapper from 'src/ui/FadeInWrapper';
+import FadeInWrapper from '../../src/ui/FadeInWrapper';
 
 const Exams = () => {
   // const timerValue = "120:59"; // Timer value

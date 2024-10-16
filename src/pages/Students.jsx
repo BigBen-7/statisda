@@ -4,7 +4,7 @@ import StudentModal from '../component/StudentModal';
 import StudentsList from '../component/StudentsList';
 // import StudentDetails from "../component/StudentDetails";
 import schoolData from '../data/db.js';
-import FadeInWrapper from 'src/ui/FadeInWrapper';
+import FadeInWrapper from '../../src/ui/FadeInWrapper';
 
 function Students() {
   const [open, setOpen] = useState(false);

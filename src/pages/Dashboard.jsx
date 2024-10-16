@@ -1,11 +1,11 @@
 // import AttendanceChart from '../component/AttendanceChart'
-import StatsCard from "../component/StatsCard";
-import ExamSchedule from "../component/ExamSchedule";
-import AttendanceChart from "../component/AttendanceChart";
-import TaskList from "../component/TaskList";
-import ClassSchedule from "../component/ClassSchedule";
-import GenderPieChart from "../component/GenderPieChart";
-import FadeInWrapper from "../ui/FadeInWrapper";
+import StatsCard from '../component/StatsCard';
+import ExamSchedule from '../component/ExamSchedule';
+import AttendanceChart from '../component/AttendanceChart';
+import TaskList from '../component/TaskList';
+import ClassSchedule from '../component/ClassSchedule';
+import GenderPieChart from '../component/GenderPieChart';
+import FadeInWrapper from '../../src/ui/FadeInWrapper';
 
 function Dashboard() {
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../component/Navbar';
 import Hero from '../component/Hero';
 import Features from '../component/Features';
-import FadeInWrapper from 'src/ui/FadeInWrapper';
+import FadeInWrapper from '../../src/ui/FadeInWrapper';
 
 function LandingPage() {
   return (
