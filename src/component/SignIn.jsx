@@ -16,7 +16,7 @@ const SignIn = () => {
   return (
     <div className="flex justify-center flex-col gap-8 items-center h-screen font-kumbh">
       <h2 className="text-2xl font-semibold">SignIn</h2>
-      <form className="bg-white shadow-lg p-8 w-[512px]">
+      <form className="bg-white shadow-lg p-8  w-full md:w-[50%] mx-auto">
         {/* Add your input fields for SignIn */}
         <>
               <FormInput

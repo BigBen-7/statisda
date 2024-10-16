@@ -5,7 +5,6 @@ import GeneralLayout from "./applayout/GeneralLayout";
 import Dashboard from "./pages/Dashboard";
 import Teachers from "./pages/Teachers";
 import Students from "./pages/Students";
-// import Billing from "./pages/Billing";
 import Settings from "./pages/Settings";
 import Exams from "./pages/Exams";
 import Features from "./pages/Features";
