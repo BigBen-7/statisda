@@ -92,13 +92,11 @@ const Signup = () => {
       } else if (currentStep === 3) {
         setCurrentStep(4);
       } else if (currentStep === 4) {
-        console.log(formData)
         setIsSubmitting(true);
         setTimeout(() => {
           dispatch(createAccount());
           navigate("/dashboard");
         }, 2000);
-
       }
     }
   };
@@ -125,13 +123,13 @@ const Signup = () => {
                 ? "Choose your password"
                 : currentStep === 3
                 ? "Invite your team"
-                : "Upload  documents"}
+                : "Upload your school's documents"}
             </h2>
           </div>
 
           {/* Form Container */}
-          <div className="bg-white shadow-custom p-4 md:p-8 w-full md:w-[512px]">
-            {/* <div className="text-center">
+          <div className="bg-white shadow-lg p-4 md:p-8 w-full md:w-[512px]">
+            <div className="text-center">
               <p className="w-full md:w-[238px] mx-auto py-4 text-[#667085] leading-[1.5625rem] font-[500] font-inter ">
                 {currentStep === 1
                   ? "It is our great pleasure to have you on board!"
@@ -141,7 +139,7 @@ const Signup = () => {
                   ? "Let’s invite your team members!"
                   : "Almost there! Upload your documents."}
               </p>
-            </div> */}
+            </div>
 
             {/* Form Steps */}
             <form onSubmit={handleNext} className="w-full md:w-[50%] mx-auto">

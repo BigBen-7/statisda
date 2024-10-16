@@ -5,7 +5,6 @@ import { GiGraduateCap } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
 import { SiGoogleclassroom } from "react-icons/si";
 import { IoIosArrowUp } from "react-icons/io";
-import {} from "framer-motion"
 
 function Dashboard() {
   return (

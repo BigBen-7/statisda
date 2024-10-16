@@ -27,11 +27,11 @@ function DashboardNav() {
         </div>
 
         {/* Right Section (Notification and Logout) */}
-        <div className="flex  items-end">
+        <div className="flex items-center">
           <span className="pr-4 lg:pr-8">
             <IoIosNotificationsOutline className="text-xl" />
           </span>
-          <button className="hidden px-4 py-2 text-white font-semibold bg-[#509CDB] text-xs rounded-lg">
+          <button className="px-4 py-2 text-white font-semibold bg-[#509CDB] text-xs rounded-lg">
             Log out
           </button>
         </div>
