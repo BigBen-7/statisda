@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom";
+import cody from "../assets/codyF.svg";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { BiMessageAltAdd } from "react-icons/bi";
 
 function DashboardNav() {
   const location = useLocation();
@@ -11,29 +13,36 @@ function DashboardNav() {
   };
 
   return (
-    <div className="bg-[#FCFAFA] p-4  shadow-md">
+    <div className="bg-[#FCFAFA] p-4 w-full  shadow-md">
       <div className="flex flex-col lg:flex-row justify-between items-center">
         {/* Left Section (Message) */}
         <div className="text-[#424242] text-center lg:text-left mb-4 lg:mb-0">
           {checkLocation("/dashboard") && (
-            <p className="flex flex-col">
-              <span>Learn how to launch faster</span>
-              <span>
-                Watch our webinar for tips from our experts and get a limited
-                time offer.
-              </span>
-            </p>
-          )}
-        </div>
+            <nav className="bg-white shadow-md p-4 flex items-center justify-between">
+              {/* Search Bar */}
+              <div className="flex-grow mx-4">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-        {/* Right Section (Notification and Logout) */}
-        <div className="flex items-center">
-          <span className="pr-4 lg:pr-8">
-            <IoIosNotificationsOutline className="text-xl" />
-          </span>
-          <button className="px-4 py-2 text-white font-semibold bg-[#509CDB] text-xs rounded-lg">
-            Log out
-          </button>
+              {/* User Profile Section */}
+              <div className="flex gap-2 items-center">
+                <IoIosNotificationsOutline />
+                <BiMessageAltAdd />
+                <div className="flex items-center space-x-2">
+                  <img
+                    src={cody}
+                    alt="cody fisher"
+                    className="h-8 w-8 rounded-full"
+                  />
+                  <p className="text-sm font-medium">Emma Georgina</p>
+                </div>
+              </div>
+            </nav>
+          )}
         </div>
       </div>
     </div>

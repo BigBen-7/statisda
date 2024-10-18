@@ -1,4 +1,5 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ClassSchedule = () => {
   const classes = [
@@ -15,12 +16,14 @@ const ClassSchedule = () => {
       <h4 className="text-gray-700 font-semibold mb-4">Today Class Schedule</h4>
       <ul className="space-y-2">
         {classes.map((cls, index) => (
-          <li key={index} className="flex  border-[2px] border-gray-100 p-3 rounded-lg pb-2">
+          <li key={index} className="flex items-center justify-between border-[2px] border-gray-100 p-3 rounded-lg pb-2">
             <div>
               <h5 className="font-semibold">{cls.subject}</h5>
               <p className="text-sm text-gray-500">{cls.chapter} <span ><FaLongArrowAltRight className="inline" /></span> <span className="text-gray-500 text-sm align-middle">{cls.time}</span></p>
             </div>
-           
+            <div className="">
+           <BsThreeDotsVertical/>
+            </div>
           </li>
         ))}
       </ul>

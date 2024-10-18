@@ -10,7 +10,8 @@ import FadeInWrapper from '../../src/ui/FadeInWrapper';
 function Dashboard() {
   return (
     <FadeInWrapper className="">
-      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6 ">
+      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
         <div className="mt-6">
           <StatsCard />
           <AttendanceChart />

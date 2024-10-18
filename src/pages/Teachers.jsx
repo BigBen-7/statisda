@@ -18,6 +18,10 @@ function Teachers() {
       console.error('No teacher data found');
     }
   }, []);
+   // Function to add new teachers to the list
+   const addTeachers = (newTeachers) => {
+    setTeachers([...teachers, ...newTeachers]); // Append new teachers to the existing list
+  };
 
   return (
     <FadeInWrapper className="">
@@ -46,7 +50,7 @@ function Teachers() {
             </div>
           </div>
 
-          <TeacherModal open={open} setOpen={setOpen} />
+          <TeacherModal open={open} setOpen={setOpen} addTeachers={addTeachers} />
 
           {/* Render TeachersList if there are teachers, else show NoTeachers */}
           {teachers.length > 0 ? (

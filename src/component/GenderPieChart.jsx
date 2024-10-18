@@ -1,11 +1,11 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
-  { name: "Male", value: 69 },
-  { name: "Female", value: 31 },
+  { name: "MALE", value: 69 },
+  { name: "FEMALE ", value: 31 },
 ];
 
-const COLORS = ["#4A90E2", "#FF6384"];
+const COLORS = ["#2174d3", "#d7c527"];
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
   cx,
@@ -22,7 +22,7 @@ const renderCustomizedLabel = ({
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
-    <text className="text-base font-semibold"
+    <text className="font-semibold"
       x={x}
       y={y}
       name={name}

@@ -63,21 +63,11 @@ const TeacherDetail = () => {
                 <strong>About:</strong>
               </p>
               <p className="max-w-md text-[#A7A7A7] font-medium">
-                Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                ullamco cillum dolor. Voluptate exercitation incididunt aliquip
-                deserunt reprehenderit elit laborum. Nulla Lorem mollit
-                cupidatat irure. Laborum magna nulla duis ullamco cillum dolor.
-                Voluptate exercitation incididunt aliquip deserunt reprehenderit
-                elit laborumNulla Lorem mollit cupidatat irure. Laborum magna nulla duis
-                ullamco cillum dolor. Voluptate exercitation incididunt aliquip
-                deserunt reprehenderit elit laborum. Nulla Lorem mollit
-                cupidatat irure. Laborum magna nulla duis ullamco cillum dolor.
-                Voluptate exercitation incididunt aliquip deserunt reprehenderit
-                elit laborum.
+               {teacherdetails.name} {teacherdetails.about}
               </p>
               <div className="flex  justify-between w-full max-w-72">
                 <p className="flex flex-col gap-2">
-                  <span className="text-[#1A1A1A]" >Age</span> <span className="text-[#A7A7A7]">34</span>
+                  <span className="text-[#1A1A1A]" >Age</span> <span className="text-[#A7A7A7]">{teacherdetails.age}</span>
                 </p>
                 <p className="flex flex-col gap-2">
                   
