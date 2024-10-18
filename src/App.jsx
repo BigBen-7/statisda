@@ -13,22 +13,22 @@ import TeacherDetail from "./component/TeacherDetails";
 import SignIn from "./component/SignIn";
 import Billing from "./pages/Billing";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import {login} from "@store/accountSlice"
+// import { useEffect } from "react";
+// import {login} from "@store/accountSlice"
 
 function App() {
   // useDispatch hook to get the dispatch function from the Store
   const dispatch = useDispatch()
 
-  useEffect(()=>{
-   // Retrieve the stored user data from local storage and parse it from JSON format.
-    const storedUser = JSON.parse(localStorage.getItem('userData'))
-     // Check if there is stored user data.
-    if(storedUser){
-      // If user data exists, dispatch the login action with the stored user data.
-      dispatch(login(storedUser))
-    }
-  },[dispatch])
+  // useEffect(()=>{
+  //  // Retrieve the stored user data from local storage and parse it from JSON format.
+  //   const storedUser = JSON.parse(localStorage.getItem('userData'))
+  //    // Check if there is stored user data.
+  //   if(storedUser){
+  //     // If user data exists, dispatch the login action with the stored user data.
+  //     dispatch(login(storedUser))
+  //   }
+  // },[dispatch])
   const router = createBrowserRouter([
     {
       path: "/",
