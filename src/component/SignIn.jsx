@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "@store/accountSlice"; // Import the login action from Redux
@@ -40,6 +40,7 @@ const SignIn = () => {
 
     // Dispatch the login action
     dispatch(login({ email: formData.email, password: formData.password }));
+    console.log("handleSubmit hit")
 
     setIsLoading(true);
 
@@ -50,18 +51,7 @@ const SignIn = () => {
       navigate("/dashboard"); // Navigate to the dashboard route when the user is authenticated
     }
   };
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // }, [isLoading, setIsLoading]);
-
-  // // Effect to navigate after a successful login
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate("/dashboard"); // Navigate to the dashboard route when the user is authenticated
-  //   }
-  // }, [user, navigate]);
+ 
 
   return (
     <>

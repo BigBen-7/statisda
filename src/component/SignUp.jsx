@@ -2,6 +2,7 @@ import { useSignupForm } from "../hooks/useSignupForm";
 import Loader from "../ui/Loader";
 import Stepper from "./Stepper";
 import SignupFormSteps from "./SignupFormSteps";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const { formData, currentStep, isLoading, isSubmitting, errors, handleChange, handleNext, handlePrevious } = useSignupForm();
@@ -38,6 +39,13 @@ const Signup = () => {
             {currentStep === 4 ? "Submit" : "Next"}
           </button>
         </div>
+         {/* Link to the signin page if the user have an account */}
+         <p className="font-medium text-center text-[#667085] text-sm py-3">
+            Already have an account?
+            <Link to="/signin" className="text-blue-500">
+              Sign In
+            </Link>
+          </p>
       </div>
 
       {/* Stepper Component */}
