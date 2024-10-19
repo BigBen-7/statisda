@@ -10,11 +10,10 @@ function Teachers() {
   const [teachers, setTeachers] = useState(schoolData.teachers);
 
   useEffect(() => {
-    console.log(schoolData); // Log the JSON data to ensure it's imported
     if (schoolData && schoolData.teachers) {
       setTeachers(schoolData.teachers);
     } else {
-      console.error('No teacher data found');
+      alert('No teacher data found');
     }
   }, []);
    // Function to add new teachers to the list

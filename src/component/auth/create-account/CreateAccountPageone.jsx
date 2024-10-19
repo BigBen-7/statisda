@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { setPageCount, setSchoolDetails } from '@store/accountSlice';
 import { useState } from 'react';
+
+
 function CreateAccountPageone() {
   const [schoolName, setSchoolName] = useState('');
   const [address, setAddress] = useState('');
@@ -13,7 +15,7 @@ function CreateAccountPageone() {
     if (!schoolName || !address || !email) return;
     dispatch(setPageCount(2));
   }
-  console.log(schoolName, address);
+
   return (
     <div>
       <p>page 1!</p>

@@ -6,7 +6,6 @@ import { BiMessageAltAdd } from "react-icons/bi";
 function DashboardNav() {
   const location = useLocation();
   const user = useSelector((state) => state.accountAuth.user)
-  console.log("User from Redux:", user);
 
   const checkLocation = (route) => {
     if (route === location.pathname) {

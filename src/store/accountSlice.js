@@ -66,17 +66,13 @@ const accountSlice = createSlice({
     login(state, action) {
       const storedUser = JSON.parse(localStorage.getItem('userData'));
       const { email, password } = action.payload;
-      
-      // Debugging logs
-      console.log("Stored User:", storedUser);
-      console.log("Entered Email:", email);
-      console.log("Entered Password:", password);
+    
     
       // Validate stored user and credentials match
       if (
         storedUser &&
-        storedUser.name.email === email &&
-        storedUser.password.password === password
+        storedUser.email === email &&
+        storedUser.password === password
       ) {
         // If credentials match, log the user in
         state.user = storedUser;
