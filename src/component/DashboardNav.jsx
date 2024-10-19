@@ -1,10 +1,11 @@
 import { useLocation } from "react-router-dom";
-// import cody from "../assets/codyF.svg";
+import {useSelector} from "react-redux"
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { BiMessageAltAdd } from "react-icons/bi";
 
 function DashboardNav() {
   const location = useLocation();
+  const user = useSelector((state) => state.accountAuth.user)
 
   const checkLocation = (route) => {
     if (route === location.pathname) {
@@ -33,7 +34,9 @@ function DashboardNav() {
                 <IoIosNotificationsOutline />
                 <BiMessageAltAdd />
                 <div className="flex items-center space-x-2">
-                  <p className="text-sm font-medium">Emma Georgina</p>
+                  <p className="text-sm font-medium">
+                    {user ? user.name : "Guest User"}
+                  </p>
                 </div>
               </div>
             </nav>

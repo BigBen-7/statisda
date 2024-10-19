@@ -13,7 +13,7 @@ function Students() {
     if (schoolData && schoolData.students) {
       setStudents(schoolData.students);
     } else {
-      console.error("No Students data found");
+     alert("No Students data found");
     }
   }, []);
 

@@ -1,19 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "@store/accountSlice"; // Import the login action from Redux
-
 import FormInput from "../ui/FormInputs";
-import Loader from "../ui/Loader";
+
 
 const SignIn = () => {
-  // State for handling form inputs (email, password)
+
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Initialize the useNavigate hook
-  const { user, error } = useSelector((state) => state.accountAuth); // Access user and error from the Redux state
-  const [ isLoading, setIsLoading ] = useState(false);
+  const { error } = useSelector((state) => state.accountAuth); // Access user and error from the Redux state
+ 
 
   // Function to handle input changes
   const handleChange = (e) => {
@@ -41,31 +40,16 @@ const SignIn = () => {
     // Dispatch the login action
     dispatch(login({ email: formData.email, password: formData.password }));
 
-    setIsLoading(true);
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-    if (user) {
-      navigate("/dashboard"); // Navigate to the dashboard route when the user is authenticated
-    }
+    const storedUser = JSON.parse(localStorage.getItem('userData'));
+    if(formData.email === storedUser.email && formData.password === storedUser.password){
+        navigate("/dashboard"); // Navigate to the dashboard route when the user is authenticated
+      }
   };
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // }, [isLoading, setIsLoading]);
-
-  // // Effect to navigate after a successful login
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate("/dashboard"); // Navigate to the dashboard route when the user is authenticated
-  //   }
-  // }, [user, navigate]);
+ 
 
   return (
     <>
-    {isLoading && <Loader/>}
+    {/* {isLoading && <Loader/>} */}
     <div className="flex justify-center flex-col gap-8 items-center h-screen font-kumbh">
       <h2 className="text-2xl font-semibold">Sign In</h2>
 

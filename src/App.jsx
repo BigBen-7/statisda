@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import 
 import LandingPage from "./pages/LandingPage";
 import GeneralLayout from "./applayout/GeneralLayout";
 import Dashboard from "./pages/Dashboard";
@@ -12,11 +11,20 @@ import Signup from "./component/SignUp";
 import TeacherDetail from "./component/TeacherDetails";
 import SignIn from "./component/SignIn";
 import Billing from "./pages/Billing";
-// import { useDispatch } from "react-redux";
 // import { useEffect } from "react";
+// import { useDispatch } from "react-redux";
+// import { login } from "@store/accountSlice";
 
 
 function App() {
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   const storedUser = JSON.parse(localStorage.getItem("userData"));
+  //   if (storedUser) {
+  //     dispatch(login({ email: storedUser.email, password: storedUser.password }));
+  //   }
+  // }, [dispatch]);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -69,6 +77,7 @@ function App() {
       ],
     },
   ]);
+
   return (
     <div>
       <RouterProvider router={router} />

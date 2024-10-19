@@ -70,7 +70,7 @@ export const useSignupForm = () => {
         setIsSubmitting(true);
         setTimeout(() => {
           dispatch(createAccount());
-          navigate("/dashboard"); // Redirect after successful creation
+          navigate("/signin"); // Redirect after successful creation
           setIsSubmitting(false); // Reset submitting state
         }, 2000);
       }

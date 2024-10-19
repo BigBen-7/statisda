@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { HiOutlineEnvelope } from "react-icons/hi2";
@@ -16,22 +15,16 @@ const TeacherDetail = () => {
     if (schoolData && schoolData.teachers) {
       setTeachers(schoolData.teachers);
     } else {
-      console.error("No teacher data found");
+      alert("No teacher data found");
     }
   }, []);
-  console.log(teachers);
-
-  const params = useParams();
-  console.log(params);
   const { id } = useParams();
   const ID = Number(id);
-  console.log(ID);
+
 
   if (!ID) {
     return <div>Teacher not found</div>; // Handle case where teacher is not found
   }
-  const filtered = teachers.filter((teacher) => teacher.id === ID);
-  console.log(filtered);
   return (
     <div className="p-6">
       {teachers
