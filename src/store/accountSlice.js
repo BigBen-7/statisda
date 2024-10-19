@@ -75,8 +75,8 @@ const accountSlice = createSlice({
       // Validate stored user and credentials match
       if (
         storedUser &&
-        storedUser.email === email &&
-        storedUser.password === password
+        storedUser.name.email === email &&
+        storedUser.password.password === password
       ) {
         // If credentials match, log the user in
         state.user = storedUser;

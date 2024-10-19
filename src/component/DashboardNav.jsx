@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import cody from "../assets/codyF.svg";
+// import cody from "../assets/codyF.svg";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { BiMessageAltAdd } from "react-icons/bi";
 
@@ -33,11 +33,6 @@ function DashboardNav() {
                 <IoIosNotificationsOutline />
                 <BiMessageAltAdd />
                 <div className="flex items-center space-x-2">
-                  <img
-                    src={cody}
-                    alt="cody fisher"
-                    className="h-8 w-8 rounded-full"
-                  />
                   <p className="text-sm font-medium">Emma Georgina</p>
                 </div>
               </div>
