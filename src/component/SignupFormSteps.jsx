@@ -1,42 +1,110 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import FormInput from "../ui/FormInputs";
 import { FaPlus } from "react-icons/fa";
 
 const SignupFormSteps = ({ currentStep, formData, errors, handleChange }) => {
-  switch (currentStep) { 
+  const [fileNames, setFileNames] = useState([]);
+
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    const names = files.map((file) => file.name);
+    setFileNames(names);
+  };
+  switch (currentStep) {
     case 1:
-      return ( 
+      return (
         <>
-          <FormInput type="text" name="name" placeholder="Enter the name Admin" value={formData.name} onChange={handleChange} />
+          <FormInput
+            type="text"
+            name="name"
+            placeholder="Enter the name Admin"
+            value={formData.name}
+            onChange={handleChange}
+          />
           {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
-          <FormInput type="text" name="schoolName" placeholder="Enter the name of school" value={formData.schoolName} onChange= {handleChange} />
-          {errors.schoolName && <p className="text-red-500 text-sm">{errors.schoolName}</p>}
-          <FormInput type="email" name="email" placeholder="Enter the school email" value={formData.email} onChange={handleChange} />
-          {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+          <FormInput
+            type="text"
+            name="schoolName"
+            placeholder="Enter the name of school"
+            value={formData.schoolName}
+            onChange={handleChange}
+          />
+          {errors.schoolName && (
+            <p className="text-red-500 text-sm">{errors.schoolName}</p>
+          )}
+          <FormInput
+            type="email"
+            name="email"
+            placeholder="Enter the school email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && (
+            <p className="text-red-500 text-sm">{errors.email}</p>
+          )}
         </>
       );
     case 2:
       return (
         <>
-          <FormInput type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} />
-          {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
-          <FormInput type="password" name="confirmPassword" placeholder="Confirm Password" value={formData.confirmPassword} onChange={handleChange} />
-          {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword}</p>}
+          <FormInput
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+          {errors.password && (
+            <p className="text-red-500 text-sm">{errors.password}</p>
+          )}
+          <FormInput
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+          />
+          {errors.confirmPassword && (
+            <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
+          )}
         </>
       );
     case 3:
       return (
         <>
-          <FormInput type="email" name="teamEmails" placeholder="Invite team members (comma separated emails)" value={formData.teamEmails} onChange={handleChange} />
-          <FormInput type="text" name="schoolAddress" placeholder="Enter School Address" value={formData.schoolAddress} onChange={handleChange} />
+          <FormInput
+            type="email"
+            name="teamEmails"
+            placeholder="Invite team members (comma separated emails)"
+            value={formData.teamEmails}
+            onChange={handleChange}
+          />
+          <FormInput
+            type="text"
+            name="schoolAddress"
+            placeholder="Enter School Address"
+            value={formData.schoolAddress}
+            onChange={handleChange}
+          />
         </>
       );
     case 4:
       return (
         <div className="flex flex-col items-center justify-center">
-          <h3 className="text-lg mb-2 ">Upload your documents</h3>
-          <div className="border-2 border-dashed border-gray-400 rounded-md p-5 px-10 flex flex-col items-center justify-center cursor-pointer" onClick={() => document.getElementById("file-input").click()}>
-            <input type="file" id="file-input" name="uploadDetails" className="hidden" multiple />
+          <h3 className="text-lg mb-2">Upload your documents</h3>
+          <div
+            className="border-2 border-dashed border-gray-400 rounded-md p-5 px-10 flex flex-col items-center justify-center cursor-pointer"
+            onClick={() => document.getElementById("file-input").click()}
+          >
+            <input
+              type="file"
+              id="file-input"
+              name="uploadDetails"
+              className="hidden"
+              multiple
+              onChange={handleFileChange} // Update state on file selection
+            />
             <span className="bg-white shadow-md w-10 h-10 rounded-full flex items-center justify-center ">
               <FaPlus className="inline" />
             </span>
@@ -46,6 +114,17 @@ const SignupFormSteps = ({ currentStep, formData, errors, handleChange }) => {
               <span className="text-gray-500">No size limit</span>
             </div>
           </div>
+          {/* Display uploaded file names */}
+          {fileNames.length > 0 && (
+            <div className="mt-4">
+              <h4 className="text-md">Uploaded Files:</h4>
+              <ul className="list-disc list-inside text-gray-700">
+                {fileNames.map((name, index) => (
+                  <li key={index}>{name}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       );
     default:
