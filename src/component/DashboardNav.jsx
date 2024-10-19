@@ -35,7 +35,8 @@ function DashboardNav() {
                 <BiMessageAltAdd />
                 <div className="flex items-center space-x-2">
                   <p className="text-sm font-medium">
-                    {user ? user.name : "Guest User"}
+                    Good day,  
+                     {user ? user.name : "Guest User"}
                   </p>
                 </div>
               </div>
