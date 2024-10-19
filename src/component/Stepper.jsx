@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
+import { FaCheck } from "react-icons/fa";
 
 // Stepper Component - Displays steps in a form wizard
 const Stepper = ({ currentStep }) => {
   const steps = [
-    { label: "Your details", description: "Name and email" },
-    { label: "Choose a password", description: "Choose a secure password" },
-    { label: "Invite your team", description: "Start collaborating" },
-    { label: "Upload school's document", description: "For account verification" },
+    { label: "Your details" },
+    { label: "password" },
+    { label: "Invite your team" },
+    { label: " Upload your School document" },
   ];
 
   return (
@@ -15,7 +16,7 @@ const Stepper = ({ currentStep }) => {
         <div key={index} className="flex flex-col items-center w-full">
           <div className="relative flex items-center justify-center">
             {index > 0 && (
-              <div className="absolute left-[-50%] top-[50%]  h-[2px] bg-green-300" />
+              <div className=" flex items-center justify-between w-44" />
             )}
             <div
               className={`flex items-center justify-center w-10 h-10 rounded-full text-white ${
@@ -27,26 +28,19 @@ const Stepper = ({ currentStep }) => {
               }`}
             >
               {currentStep > index + 1 ? (
-                <span>&#10003;</span> // Tick mark for completed steps
+                <span><FaCheck/></span> // Tick mark for completed steps
               ) : (
                 <span>{index + 1}</span> // Step number for active and future steps
               )}
             </div>
           </div>
-          <div className="mt-2 text-center">
+          <div className="mt-2 flex items-center justify-center text-center">
             <p
               className={`font-medium text-sm ${
                 currentStep >= index + 1 ? "text-blue-500" : "text-gray-500"
               }`}
             >
-              {step.label}
-            </p>
-            <p
-              className={`text-xs ${
-                currentStep >= index + 1 ? "text-blue-500" : "text-gray-400"
-              }`}
-            >
-              {step.description}
+              {/* {step.label} */}
             </p>
           </div>
         </div>

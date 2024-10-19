@@ -85,8 +85,6 @@ const TeacherDetail = () => {
               </div>
               </div>
             </div>
-            {/* <p><strong>Class:</strong> {teacherdetails.class}</p> */}
-            {/* <p><strong>Email:</strong> {teacherdetails.email}</p> */}
           </div>
         ))}
     </div>

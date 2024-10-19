@@ -1,21 +1,19 @@
-import { useEffect, useState } from 'react';
-import NoStudent from '../component/NoStudent';
-import StudentModal from '../component/StudentModal';
-import StudentsList from '../component/StudentsList';
-// import StudentDetails from "../component/StudentDetails";
-import schoolData from '../data/db.js';
-import FadeInWrapper from '../../src/ui/FadeInWrapper';
+import { useEffect, useState } from "react";
+import NoStudent from "../component/NoStudent";
+import StudentModal from "../component/StudentModal";
+import StudentsList from "../component/StudentsList";
+import schoolData from "../data/db.js";
+import FadeInWrapper from "../../src/ui/FadeInWrapper";
 
 function Students() {
   const [open, setOpen] = useState(false);
   const [students, setStudents] = useState([]);
-  // const [selectedStudent, setSelectedStudent] = useState(null);
 
   useEffect(() => {
     if (schoolData && schoolData.students) {
       setStudents(schoolData.students);
     } else {
-      console.error('No Students data found');
+      console.error("No Students data found");
     }
   }, []);
 
@@ -23,14 +21,6 @@ function Students() {
   const addStudent = (newStudent) => {
     setStudents([...students, newStudent]);
   };
-  // const handleCloseDetails = () => {
-  //   setSelectedStudent(null); // Close the details by setting to null
-  // };
-
-  // // Function to handle when a student is clicked
-  // const handleStudentClick = (student) => {
-  //   setSelectedStudent(student); // Set the selected student
-  // };
 
   return (
     <FadeInWrapper className="">
@@ -63,12 +53,6 @@ function Students() {
             <StudentsList students={students} />
           )}
         </div>
-
-        {/* Student Details Section */}
-        {/* <div className="md:w-96">
-        <StudentDetails student={selectedStudent} />
-        onClose={handleCloseDetails} onStudentClick={handleStudentClick}
-      </div> */}
       </div>
     </FadeInWrapper>
   );

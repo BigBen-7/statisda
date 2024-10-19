@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import NoTeachers from '../component/NoTeachers';
 import TeacherModal from '../component/TeacherModal';
