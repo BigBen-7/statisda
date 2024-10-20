@@ -11,20 +11,11 @@ import Signup from "./component/SignUp";
 import TeacherDetail from "./component/TeacherDetails";
 import SignIn from "./component/SignIn";
 import Billing from "./pages/Billing";
-// import { useEffect } from "react";
-// import { useDispatch } from "react-redux";
-// import { login } from "@store/accountSlice";
+import NotFound from "./pages/NotFound";
+
 
 
 function App() {
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   const storedUser = JSON.parse(localStorage.getItem("userData"));
-  //   if (storedUser) {
-  //     dispatch(login({ email: storedUser.email, password: storedUser.password }));
-  //   }
-  // }, [dispatch]);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -76,6 +67,10 @@ function App() {
         }
       ],
     },
+    {
+      path:"*",
+      element: <NotFound/>
+    }
   ]);
 
   return (
